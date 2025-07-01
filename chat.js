@@ -1,6 +1,6 @@
 class TeamDillsChat {
     constructor() {
-        this.isExpanded = false;
+        this.isExpanded = true; // Start expanded
         this.messages = [];
         this.isLoading = false;
         
@@ -12,6 +12,13 @@ class TeamDillsChat {
             role: 'assistant',
             content: "Hello! I'm here to help answer your questions. How can Team Dills assist you today?"
         });
+        
+        // Auto-focus on the input when starting expanded
+        setTimeout(() => {
+            if (this.chatInput) {
+                this.chatInput.focus();
+            }
+        }, 100);
     }
 
     initializeElements() {
