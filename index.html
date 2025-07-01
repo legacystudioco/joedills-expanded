@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Dills Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Team Dills Chat Widget Only -->
+    <div id="teamDillsChat">
+        <!-- Minimized Chat Button -->
+        <div id="chatMinimized" class="chat-minimized">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1 .2 0 .5-.1.7-.3L14.4 18H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H14l-2 2v-2H4V4h16v12z"/>
+            </svg>
+            <div class="chat-tooltip">Ask Team Dills</div>
+        </div>
+
+        <!-- Expanded Chat Window -->
+        <div id="chatExpanded" class="chat-expanded hidden">
+            <div class="chat-header">
+                <div class="chat-title">Ask Team Dills</div>
+                <button id="chatClose" class="chat-close">&times;</button>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <div class="message message-bot">
+                    Hello! I'm here to help answer your questions. How can Team Dills assist you today?
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <button id="noQuestionsBtn" class="no-questions-btn">
+                    No Further Questions
+                </button>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Type your message..." maxlength="500">
+                    <button id="chatSend" class="chat-send">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include scripts -->
+    <script src="chat.js"></script>
+</body>
+</html>
